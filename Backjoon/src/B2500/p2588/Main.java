@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package B2500.p2588;
 
 import java.util.Scanner;
@@ -60,4 +59,3 @@ public class Main {
 	}
 
 }
->>>>>>> branch 'master' of https://github.com/eune2507/Backjoon.git

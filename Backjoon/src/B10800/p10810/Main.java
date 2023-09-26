@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package B10800.p10810;
 
 import java.util.Scanner;
@@ -70,4 +69,4 @@ public class Main {
 	}
 
 }
->>>>>>> branch 'master' of https://github.com/eune2507/Backjoon.git
+
