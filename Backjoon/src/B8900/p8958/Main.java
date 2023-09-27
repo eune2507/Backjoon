@@ -21,10 +21,13 @@ public class Main {
 				int z = j + 1;
 				if (z != strX[i].length()) {
 					if (strX[i].charAt(j) == 'O' && strX[i].charAt(z) == 'O') {
-						System.out.println("i = " + i + " j = " + j + " z = " + z);
-					}
+						System.out.println("i = " + i + " j = " + j + " z = " + z);	
+					}	
 				}
 			}
+			
+			
+			
 		}
 	}
 }
