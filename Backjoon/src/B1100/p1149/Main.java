@@ -15,7 +15,6 @@ public class Main {
 			}
 		}
 		sc.close();
-		int sum = 0;
 		
 	}
 
