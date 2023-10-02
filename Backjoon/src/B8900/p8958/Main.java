@@ -35,11 +35,13 @@ public class Main {
 					count = 1;
 				} else {
 					sum += count++;
+
 				}
+				System.out.println(sum);
+				sum = 0;
+				count = 1;
+
 			}
-			System.out.println(sum);
-			sum = 0;
-			count = 1;
 		}
 	}
 }
