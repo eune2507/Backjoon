@@ -27,24 +27,25 @@ public class Main {
 			} else {
 				System.out.print(0+" ");
 			}
-			if(money[i]- 25*quarter>=10) {
+			if((money[i]- 25*quarter)>=10) {
 				dime = (money[i]-25*quarter)/10;
 				System.out.print(dime+" ");
 			} else {
 				System.out.print(0+" ");
 			}
-			if(money[i] - 25*quarter - 10*dime>=5) {
+			if((money[i] - 25*quarter - 10*dime)>=5) {
 				nickel =  (money[i] - 25*quarter - 10*dime)/5;
 				System.out.print(nickel+" ");
 			} else {
 				System.out.print(0+" ");
 			}
-			if(money[i] - 25*quarter - 10*dime - 5*nickel >=1) {
+			if((money[i] - 25*quarter - 10*dime - 5*nickel) >=1) {
 				penny = money[i] - 25*quarter - 10*dime - 5*nickel;
 				System.out.print(penny+" ");
 			} else {
 				System.out.print(0+" ");
 			}
+			quarter = 0; dime = 0; nickel = 0; penny = 0;
 			System.out.println();
 		}
 		sc.close();
