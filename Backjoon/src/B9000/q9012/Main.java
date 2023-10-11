@@ -19,30 +19,32 @@ public class Main {
 		for (int i = 0; i < x; i++) {
 			if (strX[i].charAt(0) != ')') {
 				for (int j = 0; j < strX[i].length(); j++) {
-					
-						if (strX[i].charAt(j) == '(') {
-							a += 1;
-						}
-						if (strX[i].charAt(j) == ')') {
-							b += 1;
-						}
-						if (b>a) {
+
+					if (strX[i].charAt(j) == '(') {
+						a += 1;
+					}
+					if (strX[i].charAt(j) == ')') {
+						b += 1;
+					}
+					if (b > a) {
+						System.out.println("NO");
+						a = 0;
+						b = 0;
+						break;
+					}
+					if (strX[i].length() - 1 == j) {
+						if (a == b) {
+							System.out.println("YES");
+						} else {
 							System.out.println("NO");
-							a = 0;
-							b = 0;
-							break;
 						}
-						if (strX[i].length() - 1 == j) {
-							if (a == b) {
-								System.out.println("YES");
-							} else {
-								System.out.println("NO");
-							}
-							a = 0;
-							b = 0;
-						}
-				} 		
-			} else { System.out.println("NO");}	
+						a = 0;
+						b = 0;
+					}
+				}
+			} else {
+				System.out.println("NO");
+			}
 		}
 	}
 }

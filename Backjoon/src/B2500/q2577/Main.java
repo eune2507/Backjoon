@@ -13,13 +13,12 @@ public class Main {
 		sc.close();
 		int mul = A*B*C;
 		String X = String.valueOf(mul);
-		System.out.println(X);
 		int num [] = new int[10];
-		for(int i = 0; i< num.length; i++) {
-			if(X.indexOf("i")>=0) {
-				num[i]++;
-			}
+		
+		for(int i = 0; i<X.length();i++) {
+			num[Character.getNumericValue(X.charAt(i))]++;
 		}
+		
 		for(int i = 0; i<num.length; i++) {
 			System.out.println(num[i]);
 		}
