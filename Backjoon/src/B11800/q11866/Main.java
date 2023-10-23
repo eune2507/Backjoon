@@ -7,15 +7,16 @@ import java.io.InputStreamReader;
 
 class Ministack {
 	private int[] ar;
-	private int topX;
-	private int count = 0;
+	private int pushX, popX, count;
 	public Ministack() {
 		ar = new int[1000];
-		topX = -1;
+		pushX = -1;
+		popX = -1;
+		count = 0;
 	}
 
 	public void push(int num) {
-		ar[++topX] = num;
+		ar[++pushX] = num;
 	}
 
 //	public int pop() {
@@ -26,8 +27,18 @@ class Ministack {
 //		}
 //	}
 	public int pop(int num) {
-		count = count + num - 1;
-		
+		for(;count<num;) {
+			if(popX>=pushX) {
+				popX = -1;
+			}
+			if(ar[++popX]!=0) {
+				count++;
+			} 
+		}
+		int result = ar[popX];
+		ar[popX] = 0;
+		count = 0;
+		return result;
 	}
 }
 public class Main {
@@ -45,11 +56,18 @@ public class Main {
 		String NK [] = br.readLine().split(" ");
 		int N = Integer.parseInt(NK[0]);
 		int K = Integer.parseInt(NK[1]);
-		for(int i = 1; i<N; i++) {
+		for(int i = 1; i<=N; i++) {
 			mini.push(i);
 		}
-		
-		
+		System.out.print("<");
+		for(int i = 0; i < N; i++) {
+			sb.append(mini.pop(K));
+			if(i!=N-1) {
+				sb.append(", ");
+			} else {
+				sb.append(">");
+			}
+		}
+		System.out.print(sb);	
 	}
-
 }
