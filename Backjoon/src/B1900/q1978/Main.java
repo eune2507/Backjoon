@@ -13,9 +13,12 @@ public class Main {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		int N = Integer.parseInt(br.readLine());
-		
+		String str = br.readLine();
+		String Number [] = str.split(" ");
 		// 소수 1000 이하 숫자 1와 자기자신만 약수로 가짐
-
+		int count = 0;
+		
+		
 	}
 
 }
